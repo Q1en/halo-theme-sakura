@@ -22,11 +22,7 @@
 <th:block th:fragment="content">
   <div id="primary" class="content-area">
     <th:block th:replace="~{macro/content-post :: content-post(${post})}" />
-    <th:block th:replace="~{module/post-pagination :: post-nextprev(${post})}" />
-    <th:block th:replace="~{module/authorprofile :: authorprofile(${post})}" />
-  </div>
-
-    <!-- Random Poem Section -->
+          <!-- Random Poem Section -->
     <div class="poem-wrap" style="position: relative; width: 730px; max-width: 80%; border: 2px solid #797979; border-top: none; text-align: center; margin: 80px auto;">
       <div class="poem-border poem-left" style="position: absolute; height: 2px; width: 27%; background-color: #797979; left: 0;"></div>
       <div class="poem-border poem-right" style="position: absolute; height: 2px; width: 27%; background-color: #797979; right: 0;"></div>
@@ -43,6 +39,9 @@
         });
       </script>
     </div>
+    <th:block th:replace="~{module/post-pagination :: post-nextprev(${post})}" />
+    <th:block th:replace="~{module/authorprofile :: authorprofile(${post})}" />
+  </div>
 
   <!--/* 评论组件 */-->
   <th:block th:replace="~{module/comment :: comment(group = 'content.halo.run', kind = 'Post', name = ${post.metadata.name})}" />
