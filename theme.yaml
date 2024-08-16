@@ -7,6 +7,10 @@ spec:
         description: 支持可预设文本的友链
         screenshot: 
         file: page_links.html
+      - name: 留言板
+        description: 支持引入随机诗词
+        screenshot: 
+        file: sheet_comment.html
   displayName: Sakura
   author:
     name: LIlGG
