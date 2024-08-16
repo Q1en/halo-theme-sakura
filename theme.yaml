@@ -11,11 +11,6 @@ spec:
         description: 支持引入随机诗词
         screenshot: 
         file: sheet_comment.html
-    post:
-      - name: 添加随机诗词
-        description: 引入随机诗词
-        screenshot: 
-        file: sheet_poem.html
   displayName: Sakura
   author:
     name: LIlGG
