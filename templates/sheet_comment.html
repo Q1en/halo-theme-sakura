@@ -29,13 +29,13 @@
       <h style="font-size: 40px; font-style: normal; position: relative; margin-top: -40px; display: inline-block; letter-spacing: 4px; color: #797979;">念两句诗</h>
       <p id="poem" style="width: 70%; margin: auto; line-height: 30px; color: #797979; font-size: 22px; margin: 15px auto;">挑选中...</p>
       <p id="info" style="width: 70%; margin: auto; line-height: 30px; color: #797979; font-size: 15px; margin: 15px auto;"></p>
-      <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+      <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8" defer></script>
       <script type="text/javascript">
-        jinrishici.load(function(result) {
-          poem.innerHTML = result.data.content;
-          info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》';
-          document.getElementById("poem").value(poem);
-          document.getElementById("info").value(info);  
+        document.addEventListener("DOMContentLoaded", function() {
+          jinrishici.load(function(result) {
+            poem.innerHTML = result.data.content;
+            info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》';
+          });
         });
       </script>
     </div>
